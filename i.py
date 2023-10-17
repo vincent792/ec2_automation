@@ -40,6 +40,7 @@ response_vm2 = ec2.run_instances(
     MinCount=1,
     MaxCount=1,
     SecurityGroupIds=['sg-0194eebdc2e23d176']
+    UserData=vm2_user_data,
 
 
 )
@@ -52,6 +53,7 @@ response_vm3 = ec2.run_instances(
     MinCount=1,
     MaxCount=1,
     SecurityGroupIds=['sg-0194eebdc2e23d176']
+    UserData=vm3_user_data,
    
 )
 
