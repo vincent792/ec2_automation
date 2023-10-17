@@ -8,7 +8,9 @@ ec2 = boto3.client('ec2')
 # Launch VM2
 response_vm2 = ec2.run_instances(
     ImageId='ami-041feb57c611358bd',
+    Name='VM2',
     InstanceType='t1.micro',
+    
     MinCount=1,
     MaxCount=1,
     SecurityGroupIds=['sg-0194eebdc2e23d176']
@@ -19,6 +21,7 @@ response_vm2 = ec2.run_instances(
 # Launch VM3
 response_vm3 = ec2.run_instances(
     ImageId='ami-041feb57c611358bd',
+    Name='VM3',
     InstanceType='t1.micro',
     MinCount=1,
     MaxCount=1,
